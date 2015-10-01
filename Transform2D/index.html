@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="wwwroot/lib/jquery.js"></script>
+    <script type="text/javascript" src="wwwroot/js/index.js"></script>
+    <script type="text/javascript" src="wwwroot/js/Transform2D.js"></script>
+    <link type="text/css" rel="stylesheet" href="wwwroot/css/index.css"/>
+    <title>Transform 2D</title>
+</head>
+<body>
+    <div class="btns" unselectable="on" style="-moz-user-select: none; -webkit-user-select: none;" onselectstart="return false;">
+        <div class="msg"></div>
+        <div class="btnGroup">
+            <div class="btn rotate-1 left">CW + 10</div>
+            <div class="btn rotate-2 right">CW - 10</div>
+        </div>
+        <div class="btnGroup">
+            <div class="btn scale-1 left">scale + 0.1</div>
+            <div class="btn scale-2 right">scale - 0.1</div>
+        </div>
+        <div class="btnGroup">
+            <div class="btn translate-1 left">left + 10</div>
+            <div class="btn translate-2 right">top + 10</div>
+        </div>
+        <div class="btnGroup">
+            <div class="btn reset left">RESET</div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="squ">Sample</div>
+    </div>
+</body>
+</html>

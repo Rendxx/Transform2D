@@ -1,0 +1,16 @@
+﻿/*
+ * Path Variable:
+ *    #less# : less source derectory
+ *    #js# : javascript source derectory
+ *
+ * Directory paths can be changed in gulpfile.js
+ */
+{
+  "less": {
+    "index": [ "#less#/index.less" ]
+  },
+  "js": {
+    "index": [ "#js#/index.js" ],
+    "Transform2D": [ "#js#/Transform2D.js" ]
+  }
+}
