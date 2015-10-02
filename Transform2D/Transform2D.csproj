@@ -35,10 +35,10 @@
     <Content Include="index.html" />
     <Content Include="src\js\index.js" />
     <Content Include="src\js\Transform2D.js" />
-    <Content Include="wwwroot\images\sample-bg.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\images\" />
     <Folder Include="wwwroot\js\" />
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
