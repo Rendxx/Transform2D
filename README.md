@@ -96,21 +96,22 @@ You can transform the element by 2 kinds of value:
 
 # Code Sample
 JavaScript:
-
-       $("#sample").rotate("30");  // set the rotation by 30 degree clockwise
-       $("#sample").rotate("-=10"); // rotate -10 degree clockwise, now the rotation is 20 degree
-       $("#sample").scale(["-=0.1",1.1]); // scale X-axis by 1-0.1 = 0.9, scale Y-axis by 1.1
-       $("#sample").transform2D({ // move the element 30 pixel to right
-            translateX: 30
-       });
-       var data = $("#sample").transform2D();
-       // data = {
-       //     rotate: 20, 
-       //     scaleX: 0.8999996188071415, 
-       //     scaleY: 1.0999981767639435, 
-       //     translateX: 30, 
-       //     translateY: 0
-       //     }
+```javascript
+$("#sample").rotate("30");  // set the rotation by 30 degree clockwise
+$("#sample").rotate("-=10"); // rotate -10 degree clockwise, now the rotation is 20 degree
+$("#sample").scale(["-=0.1",1.1]); // scale X-axis by 1-0.1 = 0.9, scale Y-axis by 1.1
+$("#sample").transform2D({ // move the element 30 pixel to right
+     translateX: 30
+});
+var data = $("#sample").transform2D();
+// data = {
+//     rotate: 20, 
+//     scaleX: 0.8999996188071415, 
+//     scaleY: 1.0999981767639435, 
+//     translateX: 30, 
+//     translateY: 0
+//     }
+```
 
 # Compatibility
 - Chrome
