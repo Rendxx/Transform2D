@@ -28,7 +28,7 @@
         if (!('rotate' in opts)) { opts.rotate = 0; }
         opts.rotate -= 10;
         //squ.transform2D(opts);
-        squ.rotate(opts.rotate);
+        squ.rotate("-=10");
         showTransform();
     });
     $(".scale-1").click(function () {

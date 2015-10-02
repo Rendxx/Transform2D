@@ -4,15 +4,15 @@ Transform 2D
 Copyright (c) 2014-2015 Dongxu Ren  http://www.rendxx.com/
  
 License: MIT (http://www.opensource.org/licenses/mit-license.php)
-Version: 3.1
-Update: 2015-09-21
+Version: 3.2
+Update: 2015-10-02
 
 Description:
-   Provide a simple way to implement 2D transform in CSS3.
+   A simple way to implement CSS3 2D transform. Works in CSS2 as well. 
    Available transformation includes: rotation, scale, translate.
 
-   Each transformation is considered as an independent event, which mean it will not affect the other transformation in case you apply multiple transformation to one element.
-   The order of transformstion in CSS3 is Translate -> Scale -> Rotate.
+   Each transformation is considered as an independent event, which mean multiple transformations will not affect each other.
+   The order of transformstion in CSS3 is Translate -> Rotate -> Scale.
 
    This library supports IE 7-8 as well. Margin attribute is used to handle offset in this case. DO NOT change margin after applying transform in IE7-8
       
@@ -47,26 +47,27 @@ API:
         
 
   Set 2D Transform:
+    Note: For all arguments, "+=" and "-=" at the head of an option mean add/minus given value based on current value, otherwise mean transform to that specific situation.
+
     [jQuery Element].rotate(deg);
     - Rotate the element clockwise
     - Arguments:
-        deg: rotate the given degree, positive value means clockwise
-
+        deg: rotate the given degree, positive value means clockwise (number/string)
 
     [jQuery Element].scaleX(ratio);
     - Scale the element in X by the given ratio
     - Arguments:
-        ratio: scale in x-axis
+        ratio: scale in x-axis (number/string)
     
     [jQuery Element].scaleY(ratio);
     - Scale the element in Y by the given ratio
     - Arguments:
-        ratio: scale in y-axis
+        ratio: scale in y-axis (number/string)
 
     [jQuery Element].scale(ratio);
     - Scale the element in both X and Y by the given ratio
     - Arguments:
-        ratio: scale in both x-axis and y-axis
+        ratio: scale in both x-axis and y-axis (number/string)
 
     [jQuery Element].scale(ratioArr);
     - Scale the element in  X and Y separately
@@ -74,23 +75,22 @@ API:
         ratioArr: [ratioX, ratioY]
      
     [jQuery Element].translateX(offset);
-    - Offset the element in X by the given ratio
+    - Offset the element in X
     - Arguments:
-        offset: offset in x-axis, positive value means right
+        offset: offset in x-axis, positive value means right (number/string)
      
     [jQuery Element].translateY(offset);
-    - Offset the element in Y by the given ratio
+    - Offset the element in Y
     - Arguments:
-        offset: offset in y-axis, positive value means bottom
+        offset: offset in y-axis, positive value means bottom (number/string)
      
     [jQuery Element].translate(offsetArr);
-    - Offset the element in  X and Y separately
+    - Offset the element in X and Y separately
     - Arguments:
         offsetArr: [offsetX,offsetY]
 
     [jQuery Element].transform2D(opts);
-    - transform the elemnt by given option
-    - "+=" and "-=" at the head of an option mean add/minus given value based on current value
+    - transform the element by given option
     - Arguments:
         opts
             {
@@ -347,9 +347,10 @@ API:
                     //var m_str = "matrix(" + m[0] + "," + m[2] + "," + m[1] + "," + m[3] + "," + m[4] + "," + m[5] + ")";
                     var m_str =
                         "translateX(" + options.translateX + "px) " +
-                        "translateY(" + options.translateY + "px) " +
+                        "translateY(" + options.translateY + "px) "+
+                        "rotate(" + options.rotate + "deg) "+
                         "scaleX(" + options.scaleX + ") " +
-                        "scaleY(" + options.scaleY + ") " + "rotate(" + options.rotate + "deg) ";
+                        "scaleY(" + options.scaleY + ") ";
 
                     $this.css("-ms-transform", m_str);
                     $this.css("-webkit-transform", m_str);
