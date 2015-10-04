@@ -2,10 +2,12 @@
 # API Document
 
 ## Get Current Transform Data
-    $(jQuery Element).rotate();
-    $(jQuery Element).scale();
-    $(jQuery Element).translate();
-    $(jQuery Element).transform2D();
+```javascript
+$(jQuery Element).rotate();
+$(jQuery Element).scale();
+$(jQuery Element).translate();
+$(jQuery Element).transform2D();
+```
 
 Get specific 2D transform data of the jQuery element. 
 
@@ -25,17 +27,21 @@ Get specific 2D transform data of the jQuery element.
 
 <div><br></div>
 ## Rotate
-    $(jQuery Element).rotate(degree);
+```javascript
+$(jQuery Element).rotate(degree);
+```
 Rotate the element clockwise.  
 *Argument format: see note below*
 
 <div><br></div>
 ## Scale
 
-    $(jQuery Element).scaleX(ratio);
-    $(jQuery Element).scaleY(ratio);
-    $(jQuery Element).scale(ratio);
-    $(jQuery Element).scale(ratioArr);
+```javascript
+$(jQuery Element).scaleX(ratio);
+$(jQuery Element).scaleY(ratio);
+$(jQuery Element).scale(ratio);
+$(jQuery Element).scale(ratioArr);
+```
 Scale the element.
 
 - **scaleX(ratio)**: Scale in X-axis.
@@ -48,9 +54,11 @@ Scale the element.
 <div><br></div>
 ## Translate
 
-    $(jQuery Element).translateX(offset);
-    $(jQuery Element).translateY(offset);
-    $(jQuery Element).translate(offsetArr);
+```javascript
+$(jQuery Element).translateX(offset);
+$(jQuery Element).translateY(offset);
+$(jQuery Element).translate(offsetArr);
+```
 Offset the element.
 
 - **translateX(ratio)**: Offset in X-axis.
@@ -75,7 +83,6 @@ Transform the element by given options.
 *Argument format: see note below*
 
 <div><br></div>
--------
 
 ## Note
 - **Argument Format:**  
