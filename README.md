@@ -12,7 +12,7 @@ Each transformation is considered as an independent event, which mean multiple t
 *Download: [Transform 2D v3.2](https://github.com/Rendxx/Transform2D/releases/tag/3.2 "Download")*
 
 # API
-[API Document][https://github.com/Rendxx/Transform2D/blob/master/API Document.md]
+[API Document][https://github.com/Rendxx/Transform2D/blob/master/API%20Document.md]
 
 # Dependency
 - [jQuery][]
