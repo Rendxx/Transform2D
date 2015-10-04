@@ -1,9 +1,11 @@
 
-#API
-    $(selector).rotate();
-    $(selector).scale();
-    $(selector).translate();
-    $(selector).transform2D();
+#API Document
+
+### Get Current Transform Data
+    $(jQuery Element).rotate();
+    $(jQuery Element).scale();
+    $(jQuery Element).translate();
+    $(jQuery Element).transform2D();
 
 Get specific 2D transform data of the jQuery element. 
 
@@ -21,18 +23,18 @@ Get specific 2D transform data of the jQuery element.
   + *translateX*
   + *translateY*
 
-<div><br></div>
 
-    [jQuery Element].rotate(degree);
+### Rotate
+    $(jQuery Element).rotate(degree);
 Rotate the element clockwise.  
 *Argument format: see note below*
 
-<div><br></div>
+### Scale
 
-    $(selector).scaleX(ratio);
-    $(selector).scaleY(ratio);
-    $(selector).scale(ratio);
-    $(selector).scale(ratioArr);
+    $(jQuery Element).scaleX(ratio);
+    $(jQuery Element).scaleY(ratio);
+    $(jQuery Element).scale(ratio);
+    $(jQuery Element).scale(ratioArr);
 Scale the element.
 
 - **scaleX(ratio)**: Scale in X-axis.
@@ -42,11 +44,11 @@ Scale the element.
 
 *Argument format: see note below*
 
-<div><br></div>
+### Translate
 
-    $(selector).translateX(offset);
-    $(selector).translateY(offset);
-    $(selector).translate(offsetArr);
+    $(jQuery Element).translateX(offset);
+    $(jQuery Element).translateY(offset);
+    $(jQuery Element).translate(offsetArr);
 Offset the element.
 
 - **translateX(ratio)**: Offset in X-axis.
@@ -55,9 +57,9 @@ Offset the element.
 
 *Argument format: see note below*
 
-<div><br></div>
+### Transform
 
-    $(selector).transform2D(opts);
+    $(jQuery Element).transform2D(opts);
 Transform the element by given options.
  
 - **opts**
@@ -67,14 +69,13 @@ Transform the element by given options.
   + translateX
   + translateY
 
-
 *Argument format: see note below*
 
-<div><br></div>
+-------
 
-> **Argument Format:**  
-You can transform the element by 2 kinds of value:  
-1. Number: Set the transformation of the given value.  
-2. String start with "+=" or "-=" and following by a number: Adjust the transformation value from current situation by given value.
+###Note
+- **Argument Format:**  
+2 kinds of format is available for transformation value:  
+ 1. Number: Set the transformation of the given value.  
+ 2. String start with "+=" or "-=" and following by a number: Adjust the transformation value from current situation by given value.
 
-<div><br></div>
