@@ -1,7 +1,7 @@
 
-#API Document
+# API Document
 
-### Get Current Transform Data
+## Get Current Transform Data
     $(jQuery Element).rotate();
     $(jQuery Element).scale();
     $(jQuery Element).translate();
@@ -24,13 +24,13 @@ Get specific 2D transform data of the jQuery element.
   + *translateY*
 
 <div><br></div>
-### Rotate
+## Rotate
     $(jQuery Element).rotate(degree);
 Rotate the element clockwise.  
 *Argument format: see note below*
 
 <div><br></div>
-### Scale
+## Scale
 
     $(jQuery Element).scaleX(ratio);
     $(jQuery Element).scaleY(ratio);
@@ -46,7 +46,7 @@ Scale the element.
 *Argument format: see note below*
 
 <div><br></div>
-### Translate
+## Translate
 
     $(jQuery Element).translateX(offset);
     $(jQuery Element).translateY(offset);
@@ -60,7 +60,7 @@ Offset the element.
 *Argument format: see note below*
 
 <div><br></div>
-### Transform
+## Transform
 
     $(jQuery Element).transform2D(opts);
 Transform the element by given options.
@@ -77,7 +77,7 @@ Transform the element by given options.
 <div><br></div>
 -------
 
-###Note
+## Note
 - **Argument Format:**  
 2 kinds of format is available for transformation value:  
  1. Number: Set the transformation of the given value.  
