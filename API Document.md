@@ -27,7 +27,7 @@ Get an object includes all transform data (list below):
 
 <div><br></div>
 
-## Set Rotation
+## Rotate
 #### $(jQuery Element).rotate(degree)
 Rotate the element clockwise.  
 
@@ -38,7 +38,7 @@ Rotate the element clockwise.
 
 <div><br></div>
 
-## Set Scale
+## Scale
 #### $(jQuery Element).scale(ratio)
 Scale in both X-axis and Y-axis.
 
