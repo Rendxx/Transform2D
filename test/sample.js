@@ -35,18 +35,17 @@
         if (!('scaleX' in opts)) { opts.scaleX = 1; }
         if (!('scaleY' in opts)) { opts.scaleY = 1; }
         opts.scaleX += 0.1;
-        opts.scaleY += 0.1;
         //squ.transform2D(opts);
-        squ.scale("+=0.1");
+        squ.scaleX("+=0.1");
         showTransform();
     });
     $(".scale-2").click(function () {
         if (!('scaleX' in opts)) { opts.scaleX = 1; }
         if (!('scaleY' in opts)) { opts.scaleY = 1; }
         opts.scaleX -= 0.1;
-        opts.scaleY -= 0.1;
+        opts.scaleY += 0.2;
         //squ.transform2D(opts);
-        squ.scale(["-=0.1", "-=0.1"]);
+        squ.scale(["-=0.1", "+=0.2"]);
         showTransform();
     });
     $(".translate-1").click(function () {
@@ -54,13 +53,6 @@
         opts.translateX += 10;
         //squ.transform2D(opts);
         squ.translateX(opts.translateX);
-        showTransform();
-    });
-    $(".translate-2").click(function () {
-        if (!('translateY' in opts)) { opts.translateY = 0; }
-        opts.translateY += 10;
-        //squ.transform2D(opts);
-        squ.translate([null, opts.translateY]);
         showTransform();
     });
     $(".translate-2").click(function () {
