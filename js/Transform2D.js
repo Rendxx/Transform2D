@@ -4,8 +4,8 @@ Transform 2D
 Copyright (c) 2014-2015 Dongxu Ren  http://www.rendxx.com/
  
 License: MIT (http://www.opensource.org/licenses/mit-license.php)
-Version: 0.3.3
-Update: 2015-10-15
+Version: 0.4.0
+Update: 2015-10-16
 
 Description:
    A simple way to implement CSS3 2D transform. Works in CSS2 as well. 
