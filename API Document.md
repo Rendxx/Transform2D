@@ -2,83 +2,126 @@
 # API Document
 
 ## Get Current Transform Data
-    $(jQuery Element).rotate();
-    $(jQuery Element).scale();
-    $(jQuery Element).translate();
-    $(jQuery Element).transform2D();
+#### $(jQuery Element).rotate() ```number```
+Get rotation value in degree.
+<h1></h1>
 
-Get specific 2D transform data of the jQuery element. 
+#### $(jQuery Element).scale() ```array```
+Get an array of scale ratio:  
+- *[scale X, scale Y]*
+<h1></h1>
 
-- rotate(): Rotation value in degree
-- scale(): Array of scale ratio: 
-  + *scale X*
-  + *scale Y*
-- translate(): Array of translate (unit: pixel):
-  + *translate X*
-  + *translate Y*
-- transform2D(): Object includes all transform data
-  + *rotate*
-  + *scaleX*
-  + *scaleY*
-  + *translateX*
-  + *translateY*
+#### $(jQuery Element).translate() ```array```
+Get an array of translate (unit: pixel):   
+- *[translate X, translate Y]*
+<h1></h1>
+
+#### $(jQuery Element).transform2D() ```object```
+Get an object includes all transform data (list below):
+  + *rotate* ```number```
+  + *scaleX* ```number```
+  + *scaleY* ```number```
+  + *translateX* ```number```
+  + *translateY* ```number```
+<h1></h1>
 
 <div><br></div>
-## Rotate
-    $(jQuery Element).rotate(degree);
+
+## Set Rotation
+#### $(jQuery Element).rotate(degree)
 Rotate the element clockwise.  
-*Argument format: see note below*
+
+- **degree** ```number``` ```string```  
+  *Argument format: [see Note below][note]*
+
+<h1></h1>
 
 <div><br></div>
-## Scale
 
-    $(jQuery Element).scaleX(ratio);
-    $(jQuery Element).scaleY(ratio);
-    $(jQuery Element).scale(ratio);
-    $(jQuery Element).scale(ratioArr);
-Scale the element.
+## Set Scale
+#### $(jQuery Element).scale(ratio)
+Scale in both X-axis and Y-axis.
 
-- **scaleX(ratio)**: Scale in X-axis.
-- **scaleY(ratio)**: Scale in Y-axis.
-- **scale(ratio)**: Scale in both X-axis and Y-axis.
-- **scale(ratioArr)**: Scale in X-axis and Y-axis separately. *ratioArr: [scaleX, scaleY]*
+- **ratio** ```number``` ```string```  
+  *Format: [see Note below][note]*
 
-*Argument format: see note below*
+<h1></h1>
+
+#### $(jQuery Element).scale(ratioArr)
+Scale in X-axis and Y-axis separately.
+
+- **ratioArr** ```array```  
+  + **0: ratioX** ```number``` ```string```  
+  + **1: ratioY** ```number``` ```string```  
+  *Format: [see Note below][note]*
+
+<h1></h1>
+
+#### $(jQuery Element).scaleX(ratioX)
+Scale only in X-axis.
+
+- **ratioX** ```number``` ```string```  
+  *Format: [see Note below][note]*
+
+<h1></h1>
+
+#### $(jQuery Element).scaleY(ratioY)
+Scale only in Y-axis.
+
+- **ratioY** ```number``` ```string```  
+  *Format: [see Note below][note]*
+
+<h1></h1>
 
 <div><br></div>
+
 ## Translate
+#### $(jQuery Element).translate(offsetArr)
+Offset in X-axis and Y-axis separately.
 
-    $(jQuery Element).translateX(offset);
-    $(jQuery Element).translateY(offset);
-    $(jQuery Element).translate(offsetArr);
-Offset the element.
+- **offsetArr** ```array```  
+  + **0: offsetX** ```number``` ```string```  
+  + **1: offsetY** ```number``` ```string```  
+  *Format: [see Note below][note]*
 
-- **translateX(ratio)**: Offset in X-axis.
-- **translateY(ratio)**: Offset in Y-axis.
-- **translate(offsetArr)**: Offset in X-axis and Y-axis separately. *offsetArr: [offsetX, offsetY]*
+<h1></h1>
 
-*Argument format: see note below*
+#### $(jQuery Element).translateX(offsetX)
+Offset only in X-axis.
+
+- **offsetX** ```number``` ```string```  
+  *Format: [see Note below][note]*
+
+<h1></h1>
+
+#### $(jQuery Element).translateY(offsetY)
+Offset only in Y-axis.
+
+- **offsetY** ```number``` ```string```  
+  *Format: [see Note below][note]*
+
+<h1></h1>
 
 <div><br></div>
-## Transform
 
-    $(jQuery Element).transform2D(opts);
+## Transform
+#### $(jQuery Element).transform2D(opts)
 Transform the element by given options.
  
-- **opts**
-  + rotate
-  + scaleX
-  + scaleY
-  + translateX
-  + translateY
-
-*Argument format: see note below*
+- **opts** ```object```  
+  + **rotate** ```number``` ```string```  
+  + **scaleX** ```number``` ```string```  
+  + **scaleY** ```number``` ```string```  
+  + **translateX** ```number``` ```string```  
+  + **translateY** ```number``` ```string```  
+    *Format: [see Note below][note]*
 
 <div><br></div>
 
 ## Note
 - **Argument Format:**  
 2 kinds of format is available for transformation value:  
- 1. Number: Set the transformation of the given value.  
- 2. String start with "+=" or "-=" and following by a number: Adjust the transformation value from current situation by given value.
+ 1. ```Number```: Set the transformation of the given value.  
+ 2. ```String```: Start with "+=" or "-=" and following by a number. Adjust the transformation value from current situation by given value.
 
+[note]: #note

@@ -9,15 +9,15 @@ Each transformation is considered as an independent event, which mean multiple t
 ![preview](https://raw.githubusercontent.com/Rendxx/Transform2D/master/preview.png "Preview")
 
 *Sample: [http://www.rendxx.com/Lib/Sample/7](http://www.rendxx.com/Lib/Sample/7 "Sample")*  
-*Download: [Transform 2D v3.2](https://github.com/Rendxx/Transform2D/releases/tag/3.2 "Download")*
+*Download: [Transform 2D v0.3.3](https://github.com/Rendxx/Transform2D/releases/tag/0.3.3 "Download")*
 
-# API
-[API Document](https://github.com/Rendxx/TipBox/blob/master/API%20Document.md)
+## API
+[API Document](https://github.com/Rendxx/Transform2D/blob/master/API%20Document.md)
 
-# Dependency
+## Dependency
 - [jQuery][]
 
-# Code Sample
+## Code Sample
 JavaScript:
 ```javascript
 $("#sample").rotate("30");  // set the rotation by 30 degree clockwise
@@ -33,15 +33,15 @@ var data = $("#sample").transform2D();
 //     scaleY: 1.0999981767639435, 
 //     translateX: 30, 
 //     translateY: 0
-//     }
+// }
 ```
 
-# Compatibility
-- Chrome
-- Fire Fox
-- Safari
-- Edge
-- IE 9-11
-- IE 7,8
+## Compatibility
+```Chrome``` ```Fire Fox``` ```Safari``` ```Edge``` ```IE 9-11``` ```IE 7,8```
+
+## License
+Copyright &copy; 2015, Rendxx. (MIT License)  
+See [LICENSE][] for more info.
 
 [jQuery]: https://jquery.com/ "jQuery Home Page"
+[LICENSE]: https://github.com/Rendxx/Transform2D/blob/master/LICENSE
