@@ -15,12 +15,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="gulpfile.js" />
+    <Content Include="js\Transform2D.js" />
+    <Content Include="js\Transform2D.min.js" />
     <Content Include="src\js\Transform2D.js" />
     <Content Include="test\sample.html" />
     <Content Include="test\sample.js" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="js\" />
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>
@@ -29,6 +30,8 @@
     <None Include="bundle.json" />
     <Content Include="LICENSE" />
     <Content Include="README.md" />
+    <Content Include="js\Transform2D.js.map" />
+    <Content Include="js\Transform2D.min.js.map" />
     <None Include="test\sample.less" />
     <None Include="package.json" />
   </ItemGroup>
