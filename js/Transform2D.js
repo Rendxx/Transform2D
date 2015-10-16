@@ -369,46 +369,42 @@ API:
                     var para = $this.data(keyName);
                     var marginTop = 0;
                     var marginLeft = 0;
-                    if (para == null) {
-                        $this.css("-ms-filter", "");
-                        $this.css("filter", "");
+                    
+                    $this.css("-ms-filter", "");
+                    $this.css("filter", "");
 
-                        marginTop = parseInt($this.css('margin-top'));
-                        if (marginTop != marginTop) marginTop = 0;
-                        marginLeft = parseInt($this.css('margin-left'));
-                        if (marginLeft != marginLeft) marginLeft = 0;
-                        para = {
-                            width: $this.width(),
-                            height: $this.height(),
-                            translateX: options.translateX,
-                            translateY: options.translateY,
-                            marginTop: marginTop,
-                            marginLeft: marginLeft
-                        };
-                    } else {
-                        para.translateX = options.translateX;
-                        para.translateY = options.translateY;
-                        marginTop = para.marginTop;
-                        marginLeft = para.marginLeft;
-                    }
-                    $this.data(keyName, para);
+                    marginTop = parseInt($this.css('margin-top'));
+                    if (marginTop != marginTop) marginTop = 0;
+                    marginLeft = parseInt($this.css('margin-left'));
+                    if (marginLeft != marginLeft) marginLeft = 0;
+
+                    if (para != null) {
+                        marginTop -= para.marginTop;
+                        marginLeft -= para.marginLeft;
+                    };
+
+                    var original_w = $this.width();
+                    var original_h = $this.height();
 
                     var m_str_ie = "progid:DXImageTransform.Microsoft.Matrix(M11=" + m[0] + ", M12=" + m[2] + ", M21=" + m[1] + ", M22=" + m[3] + ", SizingMethod='auto expand')";
                     $this.css("-ms-filter", m_str_ie);
                     $this.css("filter", m_str_ie);
                     var w2 = $this.width();
                     var h2 = $this.height();
-                    var offset_w = (w2 - para.width) / 2;
-                    var offset_h = (h2 - para.height) / 2;
+                    var offset_w = (w2 - original_w) / 2;
+                    var offset_h = (h2 - original_h) / 2;
 
-                    // set offset
-                    //var l = Math.sqrt(options.translateX * options.translateX + options.translateY * options.translateY);
-                    //var r = Math.atan2(options.translateX, options.translateY) - radians;
-                    //var tx = l * Math.sin(r);
-                    //var ty = l * Math.cos(r);
+                    para = {
+                        translateX: options.translateX,
+                        translateY: options.translateY,
+                        marginTop: options.translateY - offset_h,
+                        marginLeft: options.translateX - offset_w
+                    };
 
-                    $this.css("margin-left", (options.translateX - offset_w + marginTop) + "px");
-                    $this.css("margin-top", (options.translateY - offset_h + marginLeft) + "px");
+                    $this.css("margin-left", (para.marginLeft + marginLeft) + "px");
+                    $this.css("margin-top", (para.marginTop + marginTop) + "px");
+
+                    $this.data(keyName, para);
                 }
             });
             return this;
