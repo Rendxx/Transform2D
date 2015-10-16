@@ -1,8 +1,0 @@
-{
-	"name": "bower",
-	"license": "Apache-2.0",
-	"private": true,
-	"dependencies": {
-    "jquery": "1.11.2"
-	}
-}

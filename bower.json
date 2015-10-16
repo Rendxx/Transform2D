@@ -1,0 +1,36 @@
+{
+  "name": "transform2D",
+  "description": "Friendly API to implement CSS3 2D transform. Works in CSS2 as well.",
+  "main": [
+    "js/Transform2D.js"
+  ],
+  "dependencies": {
+    "jquery": "1.11.2"
+  },
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "transform",
+    "transform 2D",
+    "css3",
+    "rotate",
+    "scale",
+    "translate",
+    "offset",
+    "rotation"
+  ],
+  "authors": [
+    "Dongxu Ren <rendxx@gmail.com> http://www.rendxx.com"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "*",
+    "!js/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Rendxx/Transform2D.git"
+  },
+  "private": false
+}
