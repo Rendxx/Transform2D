@@ -4,12 +4,23 @@ Available transformation includes: **rotation, scale, translate**.
 
 Each transformation is considered as an independent event, which mean multiple transformations will not affect each other. The transformation will not be affect by the applying order.
 
-**Margin**  is used to handle offset in CSS2. DO NOT change them after applying transform in this case.
+>**Margin**  is used to handle offset in CSS2. DO NOT change them after applying transform in this case.
 
 ![preview](https://raw.githubusercontent.com/Rendxx/Transform2D/master/preview.png "Preview")
 
 *Sample: [http://www.rendxx.com/Lib/Sample/7](http://www.rendxx.com/Lib/Sample/7 "Sample")*  
 *Download: [Transform 2D v0.3.4](https://github.com/Rendxx/Transform2D/releases/tag/0.3.4 "Download")*
+
+## Install
+Download the package from bower
+```
+bower install transform2D --save
+```
+
+Including the file in your webpage
+```HTML
+<script type="text/javascript" src="/node_modules/transform2D/js/Transform2D.js"></script>
+```
 
 ## API
 [API Document](https://github.com/Rendxx/Transform2D/blob/master/API%20Document.md)
