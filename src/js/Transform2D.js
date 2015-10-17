@@ -4,7 +4,7 @@ Transform 2D
 Copyright (c) 2014-2015 Dongxu Ren  http://www.rendxx.com/
  
 License: MIT (http://www.opensource.org/licenses/mit-license.php)
-Version: 0.4.0
+Version: 0.4.1
 Update: 2015-10-16
 
 Description:
@@ -347,8 +347,8 @@ API:
                     //var m_str = "matrix(" + m[0] + "," + m[2] + "," + m[1] + "," + m[3] + "," + m[4] + "," + m[5] + ")";
                     var m_str =
                         "translateX(" + options.translateX + "px) " +
-                        "translateY(" + options.translateY + "px) "+
-                        "rotate(" + options.rotate + "deg) "+
+                        "translateY(" + options.translateY + "px) " +
+                        "rotate(" + options.rotate + "deg) " +
                         "scaleX(" + options.scaleX + ") " +
                         "scaleY(" + options.scaleY + ") ";
 
@@ -359,7 +359,12 @@ API:
                 } else {
                     // For IE 7 8
                     var radians = (options.rotate % 360) * (Math.PI / 180);
-                    var m2 = matrixMult([Math.cos(radians), Math.sin(radians), -1 * Math.sin(radians), Math.cos(radians), 0, 0], [options.scaleX, 0, 0, options.scaleY, options.translateX, options.translateY]);
+                    var scaleX = options.scaleX;
+                    var scaleY = options.scaleY;
+                    var translateX = options.translateX | 0;
+                    var translateY = options.translateY | 0;
+
+                    var m2 = matrixMult([Math.cos(radians), Math.sin(radians), -1 * Math.sin(radians), Math.cos(radians), 0, 0], [scaleX, 0, 0, scaleY, translateX, translateY]);
                     var m = [];
                     for (var i = 0; i < 6; i++) {
                         m[i] = String(m2[i]);
@@ -369,7 +374,7 @@ API:
                     var para = $this.data(keyName);
                     var marginTop = 0;
                     var marginLeft = 0;
-                    
+
                     $this.css("-ms-filter", "");
                     $this.css("filter", "");
 
@@ -391,14 +396,14 @@ API:
                     $this.css("filter", m_str_ie);
                     var w2 = $this.width();
                     var h2 = $this.height();
-                    var offset_w = (w2 - original_w) / 2;
-                    var offset_h = (h2 - original_h) / 2;
+                    var offset_w = ((w2 - original_w) / 2) | 0;
+                    var offset_h = ((h2 - original_h) / 2) | 0;
 
                     para = {
-                        translateX: options.translateX,
-                        translateY: options.translateY,
-                        marginTop: options.translateY - offset_h,
-                        marginLeft: options.translateX - offset_w
+                        translateX: translateX,
+                        translateY: translateY,
+                        marginTop: translateY - offset_h,
+                        marginLeft: translateX - offset_w
                     };
 
                     $this.css("margin-left", (para.marginLeft + marginLeft) + "px");
